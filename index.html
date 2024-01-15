@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tabla de Datos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Tabla de Datos</h2>
+        <!-- Aquí irá la tabla -->
+    </div>
+
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<!-- ... (código previo) ... -->
+<div class="container mt-5">
+    <h2 class="mb-4">Tabla de Datos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">IP</th>
+                <th scope="col">País</th>
+                <th scope="col">Continente</th>
+                <th scope="col">Zona Horaria</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-datos-body">
+            <!-- Aquí se mostrarán los datos -->
+        </tbody>
+    </table>
+</div>
+<!-- ... (código posterior) ... -->
+<!-- ... (código previo) ... -->
+<script>
+    $(document).ready(function() {
+        // Hacer la solicitud a la API
+        $.get("URL_DE_TU_API", function(data) {
+            // Limpiar la tabla antes de agregar nuevos datos
+            $("#tabla-datos-body").empty();
+
+            // Iterar sobre los datos y agregar filas a la tabla
+            $.each(data, function(index, item) {
+                $("#tabla-datos-body").append(`
+                    <tr>
+                        <td>${item.ip}</td>
+                        <td>${item.pais}</td>
+                        <td>${item.continente}</td>
+                        <td>${item.zonaHoraria}</td>
+                    </tr>
+                `);
+            });
+        });
+    });
+</script>
+</body>
+</html>
