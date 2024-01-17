@@ -8,18 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h2 class="mb-4">Tabla de Datos</h2>
-        <!-- Aquí irá la tabla -->
-    </div>
-
-    <!-- Bootstrap JS y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-<!-- ... (código previo) ... -->
+    
+    <!-- ... (código previo) ... -->
 <div class="container mt-5">
     <h2 class="mb-4">Tabla de Datos</h2>
     <table class="table">
@@ -28,36 +18,27 @@
                 <th scope="col">IP</th>
                 <th scope="col">País</th>
                 <th scope="col">Continente</th>
-                <th scope="col">Zona Horaria</th>
+                <th scope="col">Zona_Horaria</th>
             </tr>
         </thead>
         <tbody id="tabla-datos-body">
-            <!-- Aquí se mostrarán los datos -->
-        </tbody>
-    </table>
+            <tr>
+         <td id="IP">1561651515</td>
+         <td id="Pais">Mexico</td>
+         <td id="Continente">America</td>
+         <td id="Zona_Horaria">Zona Horaria</td>
+        </tr>
 </div>
-<!-- ... (código posterior) ... -->
-<!-- ... (código previo) ... -->
-<script>
-    $(document).ready(function() {
-        // Hacer la solicitud a la API
-        $.get("URL_DE_TU_API", function(data) {
-            // Limpiar la tabla antes de agregar nuevos datos
-            $("#tabla-datos-body").empty();
 
-            // Iterar sobre los datos y agregar filas a la tabla
-            $.each(data, function(index, item) {
-                $("#tabla-datos-body").append(`
-                    <tr>
-                        <td>${item.ip}</td>
-                        <td>${item.pais}</td>
-                        <td>${item.continente}</td>
-                        <td>${item.zonaHoraria}</td>
-                    </tr>
-                `);
-            });
-        });
-    });
-</script>
+    <!-- Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="Js/main.js"> </script>
 </body>
 </html>
+
+
+
