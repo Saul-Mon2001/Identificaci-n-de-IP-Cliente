@@ -3,32 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tabla de Datos</title>
+    <title>Formulario e Tabla de Datos</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     
-    <!-- ... (código previo) ... -->
-<div class="container mt-5">
-    <h2 class="mb-4">Tabla de Datos</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">IP</th>
-                <th scope="col">País</th>
-                <th scope="col">Continente</th>
-                <th scope="col">Zona_Horaria</th>
-            </tr>
-        </thead>
-        <tbody id="tabla-datos-body">
-            <tr>
-         <td id="IP">1561651515</td>
-         <td id="Pais">Mexico</td>
-         <td id="Continente">America</td>
-         <td id="Zona_Horaria">Zona Horaria</td>
-        </tr>
-</div>
+    <div class="container mt-5">
+        <h2 class="mb-4">Ingresar Datos</h2>
+        <form id="formulario-datos">
+            <div class="form-group">
+                <label for="ip">IP:</label>
+                <input type="text" class="form-control" id="ip" name="ip" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <input type="text" class="form-control" id="pais" name="pais" required>
+            </div>
+
+            <div class="form-group">
+                <label for="continente">Continente:</label>
+                <input type="text" class="form-control" id="continente" name="continente" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zonaHoraria">Zona Horaria:</label>
+                <input type="text" class="form-control" id="zonaHoraria" name="zonaHoraria" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ingresar Datos</button>
+        </form>
+
+        <h2 class="mt-5 mb-4">Tabla de Datos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">IP</th>
+                    <th scope="col">País</th>
+                    <th scope="col">Continente</th>
+                    <th scope="col">Zona Horaria</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-datos-body">
+                <!-- Aquí se mostrarán los datos ingresados dinámicamente -->
+            </tbody>
+        </table>
+    </div>
 
     <!-- Bootstrap JS y jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -36,7 +57,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="Js/main.js"> </script>
+    <script src="Js/main.js"></script>
 </body>
 </html>
 
